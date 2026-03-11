@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Gagandeep Singh — Computer Science Engineer. I write code, not names." />
+  <title>KIRA · Portfolio — Gagandeep Singh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cinzel+Decorative:wght@700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- FALLING PARTICLES CANVAS -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- NOTEBOOK RULED LINES OVERLAY -->
+  <div class="notebook-lines-overlay" aria-hidden="true"></div>
+
+  <!-- KANJI WATERMARK -->
+  <div class="kanji-watermark" aria-hidden="true">死</div>
+
+  <!-- ── NAV ── -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">KIRA<span class="logo-sep">·</span>PORTFOLIO</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#abilities">Skills</a></li>
+        <li><a href="#case-files">Projects</a></li>
+        <li><a href="#timeline">Timeline</a></li>
+        <li><a href="#reach-out">Contact</a></li>
+      </ul>
+      <a href="Cv Updated.docx" target="_blank" class="btn-cv">VIEW CV</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
+      <li><a href="#abilities" onclick="closeMobileMenu()">Skills</a></li>
+      <li><a href="#case-files" onclick="closeMobileMenu()">Projects</a></li>
+      <li><a href="#timeline" onclick="closeMobileMenu()">Timeline</a></li>
+      <li><a href="#reach-out" onclick="closeMobileMenu()">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ── HERO ── -->
+  <section id="hero">
+    <div class="hero-content">
+      <p class="hero-eyebrow">I AM<span class="ellipsis">...</span></p>
+      <h1 class="hero-name">
+        <span class="name-line1">GAGANDEEP</span>
+        <span class="name-line2">SINGH</span>
+      </h1>
+      <p class="hero-subtitle">Computer Science Engineer &amp; Full-Stack Developer</p>
+      <div class="hero-actions">
+        <a href="#case-files" class="btn-primary">View My Work</a>
+        <a href="#reach-out" class="btn-ghost">Let's Connect</a>
+      </div>
+      <div class="hero-chips">
+        <span class="hero-chip">✎ C++</span>
+        <span class="hero-chip">✎ Python</span>
+        <span class="hero-chip">✎ React</span>
+        <span class="hero-chip">✎ Java</span>
+        <span class="hero-chip">✎ SQL</span>
+      </div>
+    </div>
+
+    <div class="hero-photo-wrap">
+      <div class="photo-corner c-tl"></div>
+      <div class="photo-corner c-tr"></div>
+      <div class="photo-corner c-bl"></div>
+      <div class="photo-corner c-br"></div>
+      <div class="photo-ruled-lines"></div>
+      <div class="photo-frame">
+        <img src="profile.png" alt="Gagandeep Singh" class="hero-photo" />
+        <div class="photo-vignette"></div>
+      </div>
+      <div class="photo-open-to">
+        <span class="dot-pulse"></span> Open to Opportunities
+      </div>
+    </div>
+
+    <!-- Gold L-divider at bottom -->
+    <div class="l-divider">
+      <div class="l-line"></div>
+      <span class="l-mono">L</span>
+      <div class="l-line"></div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section id="about" class="dn-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">FILE №001</div>
+        <h2 class="section-title">DOSSIER <span class="kanji-s">身元</span></h2>
+        <div class="title-rule"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I'm a passionate <strong>Computer Science Engineering</strong> student at Lovely Professional University,
+            Punjab — turning complex problems into elegant code.</p>
+          <p>Strong foundation in <strong>Data Structures &amp; Algorithms</strong>, full-stack development, and data
+            science. I build things that make a real-world impact.</p>
+          <p>As <strong>Campus Lead of D4 Community @ LPU</strong>, I lead technical projects, organize events, and grow
+            a culture of innovation.</p>
+          <div class="contact-chips">
+            <a href="tel:+916350432224" class="dn-chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.59a16 16 0 0 0 6.5 6.5l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              +91-6350432224
+            </a>
+            <a href="mailto:gaganrai2027@gmail.com" class="dn-chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              gaganrai2027@gmail.com
+            </a>
+          </div>
+        </div>
+        <div class="about-stats">
+          <div class="dn-stat"><span class="dn-num">LPU</span><span class="dn-lbl">B.Tech CSE</span></div>
+          <div class="dn-stat gold-stat"><span class="dn-num">D4</span><span class="dn-lbl">Campus Lead</span></div>
+          <div class="dn-stat"><span class="dn-num">3+</span><span class="dn-lbl">Projects</span></div>
+          <div class="dn-stat"><span class="dn-num">2</span><span class="dn-lbl">Certifications</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ABILITIES / SKILLS ── -->
+  <section id="abilities" class="dn-section dn-dark">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">FILE №002</div>
+        <h2 class="section-title">ABILITIES <span class="kanji-s">能</span></h2>
+        <div class="title-rule"></div>
+        <p class="dn-quote">"Shinigami only eat apples. I only eat problems."</p>
+      </div>
+
+      <div class="skill-filters">
+        <button class="skill-filter active" data-filter="all">All</button>
+        <button class="skill-filter" data-filter="language">Language</button>
+        <button class="skill-filter" data-filter="framework">Framework</button>
+        <button class="skill-filter" data-filter="tool">Tool</button>
+        <button class="skill-filter" data-filter="soft">Soft Skills</button>
+      </div>
+
+      <div class="skills-icon-grid" id="skills-icon-grid">
+        <div class="skill-icon-card" data-category="language"><i
+            class="devicon-python-plain colored"></i><span>Python</span></div>
+        <div class="skill-icon-card" data-category="language"><i
+            class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+        <div class="skill-icon-card" data-category="language"><i
+            class="devicon-cplusplus-plain colored"></i><span>C++</span></div>
+        <div class="skill-icon-card" data-category="language"><i
+            class="devicon-java-plain colored"></i><span>Java</span></div>
+        <div class="skill-icon-card" data-category="language"><i
+            class="devicon-mysql-plain colored"></i><span>SQL</span></div>
+        <div class="skill-icon-card" data-category="framework"><i
+            class="devicon-html5-plain colored"></i><span>HTML5</span></div>
+        <div class="skill-icon-card" data-category="framework"><i
+            class="devicon-css3-plain colored"></i><span>CSS3</span></div>
+        <div class="skill-icon-card" data-category="framework"><i
+            class="devicon-tailwindcss-plain colored"></i><span>Tailwind CSS</span></div>
+        <div class="skill-icon-card" data-category="framework"><i
+            class="devicon-react-plain colored"></i><span>React</span></div>
+        <div class="skill-icon-card" data-category="framework"><i
+            class="devicon-nodejs-plain colored"></i><span>Node.js</span></div>
+        <div class="skill-icon-card" data-category="tool"><i class="devicon-git-plain colored"></i><span>Git</span>
+        </div>
+        <div class="skill-icon-card" data-category="tool"><i
+            class="devicon-github-original colored"></i><span>GitHub</span></div>
+        <div class="skill-icon-card" data-category="tool"><i class="devicon-vscode-plain colored"></i><span>VS
+            Code</span></div>
+        <div class="skill-icon-card" data-category="tool"><i class="devicon-mysql-plain colored"></i><span>MySQL</span>
+        </div>
+        <div class="skill-icon-card" data-category="tool"><i class="devicon-googlecolab-plain colored"></i><span>Google
+            Colab</span></div>
+        <div class="skill-icon-card" data-category="tool">
+          <svg viewBox="0 0 32 32" class="sk-svg">
+            <rect x="2" y="16" width="6" height="14" rx="1.5" fill="#F2C811" />
+            <rect x="10" y="10" width="6" height="20" rx="1.5" fill="#F2C811" opacity=".85" />
+            <rect x="18" y="4" width="6" height="26" rx="1.5" fill="#F2C811" opacity=".7" />
+            <rect x="26" y="12" width="4" height="18" rx="1.5" fill="#F2C811" opacity=".5" />
+          </svg>
+          <span>Power BI</span>
+        </div>
+        <div class="skill-icon-card" data-category="soft">
+          <svg viewBox="0 0 24 24" class="sk-svg" fill="none" stroke="#6366f1" stroke-width="1.8">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+            <line x1="12" y1="17" x2="12.01" y2="17" />
+          </svg>
+          <span>Problem Solving</span>
+        </div>
+        <div class="skill-icon-card" data-category="soft">
+          <svg viewBox="0 0 24 24" class="sk-svg" fill="none" stroke="#06b6d4" stroke-width="1.8">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+          </svg>
+          <span>Analytical Thinking</span>
+        </div>
+        <div class="skill-icon-card" data-category="soft">
+          <svg viewBox="0 0 24 24" class="sk-svg" fill="none" stroke="#10b981" stroke-width="1.8">
+            <polyline points="17 1 21 5 17 9" />
+            <path d="M3 11V9a4 4 0 0 1 4-4h14" />
+            <polyline points="7 23 3 19 7 15" />
+            <path d="M21 13v2a4 4 0 0 1-4 4H3" />
+          </svg>
+          <span>Adaptability</span>
+        </div>
+        <div class="skill-icon-card" data-category="soft">
+          <svg viewBox="0 0 24 24" class="sk-svg" fill="none" stroke="#a855f7" stroke-width="1.8">
+            <circle cx="12" cy="12" r="10" />
+            <polyline points="12 6 12 12 16 14" />
+          </svg>
+          <span>Time Management</span>
+        </div>
+      </div>
+
+      <div class="wings-divider">
+        <div class="wing-line"></div><span>⚔</span>
+        <div class="wing-line"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CASE FILES / PROJECTS ── -->
+  <section id="case-files" class="dn-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">FILE №003</div>
+        <h2 class="section-title">CASE FILES <span class="kanji-s">案件</span></h2>
+        <div class="title-rule"></div>
+      </div>
+      <div class="case-grid">
+
+        <div class="case-card" id="case1">
+          <div class="case-stamp red-stamp">CASE #01</div>
+          <div class="case-corners">
+            <div class="cc cc-tl"></div>
+            <div class="cc cc-tr"></div>
+            <div class="cc cc-bl"></div>
+            <div class="cc cc-br"></div>
+          </div>
+          <div class="case-hd">
+            <div class="case-icon ci-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5">
+                <line x1="18" y1="20" x2="18" y2="10" />
+                <line x1="12" y1="20" x2="12" y2="4" />
+                <line x1="6" y1="20" x2="6" y2="14" />
+              </svg></div><span class="case-date">December 2025</span>
+          </div>
+          <h3>Crypto Market Insights Dashboard</h3>
+          <p class="case-type">Power BI Project</p>
+          <p class="case-desc">Interactive cryptocurrency market dashboard analyzing market capitalization, price
+            trends, trading volume across major cryptocurrencies using Microsoft Power BI.</p>
+          <ul class="case-notes">
+            <li>Processed raw market data via Power Query with DAX measures for KPIs</li>
+            <li>Built dynamic slicers, segmentation &amp; dominance analysis visualizations</li>
+          </ul>
+          <div class="case-tags"><span class="ctag">Power BI</span><span class="ctag">DAX</span><span class="ctag">Power
+              Query</span><span class="ctag">Analytics</span></div>
+          <a href="https://github.com/gagan27x/Crypto-Market-Insights-Analysis-using-Power-BI" target="_blank"
+            rel="noopener" class="case-github"><svg viewBox="0 0 24 24" width="16" height="16">
+              <path
+                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                fill="currentColor" />
+            </svg> View on GitHub</a>
+        </div>
+
+        <div class="case-card featured-case" id="case2">
+          <div class="case-stamp gold-stamp">★ FEATURED</div>
+          <div class="case-corners gold-cc">
+            <div class="cc cc-tl"></div>
+            <div class="cc cc-tr"></div>
+            <div class="cc cc-bl"></div>
+            <div class="cc cc-br"></div>
+          </div>
+          <div class="case-hd">
+            <div class="case-icon ci-purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5">
+                <path d="M9 18V5l12-2v13" />
+                <circle cx="6" cy="18" r="3" />
+                <circle cx="18" cy="16" r="3" />
+              </svg></div><span class="case-date">June 2025</span>
+          </div>
+          <h3>Music Playlist Management System</h3>
+          <p class="case-type">DSA-Based Project</p>
+          <p class="case-desc">Web-based music playlist system using HTML, CSS, and JavaScript, with efficient data
+            structures for smooth user experience and optimized playback.</p>
+          <ul class="case-notes">
+            <li>Implemented <strong>Linked List</strong> for playlist management, <strong>Stack</strong> to track
+              recently played songs</li>
+            <li>Analyzed time complexity, improved traversal and update performance</li>
+          </ul>
+          <div class="case-tags"><span class="ctag">JavaScript</span><span class="ctag">HTML/CSS</span><span
+              class="ctag">DSA</span><span class="ctag">Linked List</span><span class="ctag">Stack</span></div>
+          <a href="https://github.com/gagan27x/Summer-Training-Project" target="_blank" rel="noopener"
+            class="case-github"><svg viewBox="0 0 24 24" width="16" height="16">
+              <path
+                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                fill="currentColor" />
+            </svg> View on GitHub</a>
+        </div>
+
+        <div class="case-card" id="case3">
+          <div class="case-stamp red-stamp">CASE #03</div>
+          <div class="case-corners">
+            <div class="cc cc-tl"></div>
+            <div class="cc cc-tr"></div>
+            <div class="cc cc-bl"></div>
+            <div class="cc cc-br"></div>
+          </div>
+          <div class="case-hd">
+            <div class="case-icon ci-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5">
+                <ellipse cx="12" cy="5" rx="9" ry="3" />
+                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+              </svg></div><span class="case-date">March 2025</span>
+          </div>
+          <h3>Employment Trends by Education Level</h3>
+          <p class="case-type">Data Science Project</p>
+          <p class="case-desc">Analyzed large-scale Indian Census and employment datasets (50,000+ records) to study the
+            impact of education levels on workforce participation across regions.</p>
+          <ul class="case-notes">
+            <li>Found employment rises from ~42% (primary edu) to ~68% (graduates)</li>
+            <li>Observed 15–20% variation across states via EDA and feature engineering</li>
+          </ul>
+          <div class="case-tags"><span class="ctag">Python</span><span class="ctag">Pandas</span><span
+              class="ctag">NumPy</span><span class="ctag">Data Science</span><span class="ctag">EDA</span></div>
+          <a href="https://github.com/gagan27x/Analyzing-Employment-Trends-by-Education-Level-in-India" target="_blank"
+            rel="noopener" class="case-github"><svg viewBox="0 0 24 24" width="16" height="16">
+              <path
+                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                fill="currentColor" />
+            </svg> View on GitHub</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TIMELINE ── -->
+  <section id="timeline" class="dn-section dn-dark">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">FILE №004</div>
+        <h2 class="section-title">CHRONICLES <span class="kanji-s">年表</span></h2>
+        <div class="title-rule"></div>
+      </div>
+      <div class="dn-timeline">
+        <div class="tl-entry dn-reveal">
+          <div class="tl-dot active-dot"></div>
+          <div class="tl-card">
+            <div class="tl-tag ongoing-tag">ONGOING</div>
+            <h3>B.Tech — Computer Science & Engineering</h3>
+            <p class="tl-org">Lovely Professional University, Punjab, India</p>
+            <p class="tl-period">Since August 2023</p>
+            <p class="tl-desc">Pursuing B.Tech CSE with focus on full-stack development, data structures, and data
+              science.</p>
+          </div>
+        </div>
+        <div class="tl-entry dn-reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-tag lead-tag">SINCE OCT 2025</div>
+            <h3>Campus Lead — D4 Community, LPU</h3>
+            <p class="tl-org">Developer Community @ Lovely Professional University</p>
+            <p class="tl-desc">Leading developer community, organizing technical events, fostering leadership and
+              innovation.</p>
+          </div>
+        </div>
+        <div class="tl-entry dn-reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-tag cert-tag">CERTIFICATE</div>
+            <h3>Interpersonal Communication for Engineering Leaders</h3>
+            <p class="tl-org">Stanford (Coursera)</p>
+            <p class="tl-period">March 2026</p>
+          </div>
+        </div>
+        <div class="tl-entry dn-reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-tag cert-tag">CERTIFICATE</div>
+            <h3>Bits and Bytes of Computer Networking</h3>
+            <p class="tl-org">Google (Coursera)</p>
+            <p class="tl-period">September 2024</p>
+          </div>
+        </div>
+        <div class="tl-entry dn-reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-tag grade-tag">83.80%</div>
+            <h3>Intermediate (12th Grade)</h3>
+            <p class="tl-org">Davinder Bal Bharti Senior Secondary School, Srivijaynagar, Raj.</p>
+            <p class="tl-period">April 2021 – March 2022</p>
+          </div>
+        </div>
+        <div class="tl-entry dn-reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-tag grade-tag">79.50%</div>
+            <h3>Matriculation (10th Grade)</h3>
+            <p class="tl-org">Davinder Bal Bharti Senior Secondary School, Srivijaynagar, Raj.</p>
+            <p class="tl-period">April 2019 – March 2020</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── REACH OUT / CONTACT ── -->
+  <section id="reach-out" class="dn-section dn-reach">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">FILE №005</div>
+        <h2 class="section-title">REACH OUT <span class="kanji-s">連絡</span></h2>
+        <div class="title-rule"></div>
+        <p class="dn-haunting">...or I'll write your name in the notebook</p>
+      </div>
+      <div class="connect-grid">
+        <a href="https://leetcode.com/u/gagan27x/" target="_blank" rel="noopener" class="dn-card" id="dnlc">
+          <div class="dn-icon lc-i"><svg viewBox="0 0 24 24">
+              <path
+                d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"
+                fill="currentColor" />
+            </svg></div>
+          <div class="dn-txt"><span class="dn-plt">LeetCode</span><span class="dn-hdl">@gagan27x</span></div><span
+            class="dn-arr">→</span>
+        </a>
+        <a href="https://github.com/gagan27x" target="_blank" rel="noopener" class="dn-card" id="dngh">
+          <div class="dn-icon gh-i"><svg viewBox="0 0 24 24">
+              <path
+                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                fill="currentColor" />
+            </svg></div>
+          <div class="dn-txt"><span class="dn-plt">GitHub</span><span class="dn-hdl">@gagan27x</span></div><span
+            class="dn-arr">→</span>
+        </a>
+        <a href="https://www.linkedin.com/in/gagan27x" target="_blank" rel="noopener" class="dn-card" id="dnli">
+          <div class="dn-icon li-i"><svg viewBox="0 0 24 24">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                fill="currentColor" />
+            </svg></div>
+          <div class="dn-txt"><span class="dn-plt">LinkedIn</span><span class="dn-hdl">@gagan27x</span></div><span
+            class="dn-arr">→</span>
+        </a>
+        <a href="https://x.com/gagan27x" target="_blank" rel="noopener" class="dn-card" id="dntw">
+          <div class="dn-icon tw-i"><svg viewBox="0 0 24 24">
+              <path
+                d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"
+                fill="currentColor" />
+            </svg></div>
+          <div class="dn-txt"><span class="dn-plt">X (Twitter)</span><span class="dn-hdl">@gagan27x</span></div><span
+            class="dn-arr">→</span>
+        </a>
+        <a href="mailto:gaganrai2027@gmail.com" class="dn-card" id="dnem">
+          <div class="dn-icon em-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg></div>
+          <div class="dn-txt"><span class="dn-plt">Email</span><span class="dn-hdl">gaganrai2027@gmail.com</span></div>
+          <span class="dn-arr">→</span>
+        </a>
+        <a href="tel:+916350432224" class="dn-card" id="dnph">
+          <div class="dn-icon ph-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.59a16 16 0 0 0 6.5 6.5l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg></div>
+          <div class="dn-txt"><span class="dn-plt">Phone</span><span class="dn-hdl">+91-6350432224</span></div><span
+            class="dn-arr">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="dn-footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <p class="footer-name">Gagandeep Singh</p>
+        <p class="footer-copy">© 2026 · B.Tech CSE @ LPU · I write code, not names.</p>
+      </div>
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/gagan27x" target="_blank" rel="noopener" class="fsb fsb-li"
+          aria-label="LinkedIn"><svg viewBox="0 0 24 24">
+            <path
+              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+              fill="currentColor" />
+          </svg></a>
+        <a href="https://github.com/gagan27x" target="_blank" rel="noopener" class="fsb fsb-gh" aria-label="GitHub"><svg
+            viewBox="0 0 24 24">
+            <path
+              d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+              fill="currentColor" />
+          </svg></a>
+        <a href="https://www.instagram.com/gagan27x" target="_blank" rel="noopener" class="fsb fsb-ig"
+          aria-label="Instagram"><svg viewBox="0 0 24 24">
+            <path
+              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+              fill="currentColor" />
+          </svg></a>
+        <a href="https://x.com/gagan27x" target="_blank" rel="noopener" class="fsb fsb-tw" aria-label="X"><svg
+            viewBox="0 0 24 24">
+            <path
+              d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"
+              fill="currentColor" />
+          </svg></a>
+        <a href="https://leetcode.com/u/gagan27x/" target="_blank" rel="noopener" class="fsb fsb-lc"
+          aria-label="LeetCode"><svg viewBox="0 0 24 24">
+            <path
+              d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"
+              fill="currentColor" />
+          </svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
